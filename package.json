@@ -1,0 +1,16 @@
+{
+  "name": "php-socket.io",
+  "version": "1.0.0",
+  "description": "Socket.IO ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node sockets/server.js"
+  },
+  "author": "Jeremias",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  }
+}
