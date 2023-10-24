@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node sockets/server.js"
+    "start": "nodemon sockets/server.js"
   },
   "author": "Jeremias",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
+    "jquery": "^3.6.1",
+    "nodemon": "^3.0.1",
     "socket.io": "^4.7.2"
   }
 }
