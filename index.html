@@ -4,14 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat NodeJS</title>
-    <link rel="stylesheet" href="">
-    <script src="./node_modules/jquery/dist/jquery.min.js" type="text/javascript" defer></script>
+    <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
     <div>
         <h1>Chat en vivo</h1>
 
-        <script src="node_modules/@socket.io/client-dist/socket.io.js"></script>
+        <ul id="messages">
+
+            <form action="" id="form">
+
+                <input id="input" autocomplete="off" />
+                <button>Send</button>
+
+            </form>
+
+        </ul>
+
+        <!-- scripts -->
+        <script src="./node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+        <script src="node_modules/socket.io/client-dist/socket.io.js"></script>
+        <script>
+            const socket = io();
+
+            let form = getElementById('form');
+            let input = getElementById('input');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                if (input.value) {
+                    socket.emit('chat Message', input.value);
+                    input.value = '';
+                }
+            });
+        </script>
+        <script src="./sockets/server.js" type="text/javascript"></script>
     </div>
 </body>
 </html>
