@@ -15,15 +15,17 @@
             <form action="" id="form">
 
                 <input id="input" autocomplete="off" />
-                <button>Send</button>
+                <button type="submit">Send</button>
 
             </form>
 
         </ul>
 
         <!-- scripts -->
-        <script src="./node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
-        <script src="node_modules/socket.io/client-dist/socket.io.js"></script>
+        <script src="../node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+
+        <script src="../node_modules/socket.io/client-dist/socket.io.js"></script>
+
         <script>
             const socket = io();
 
@@ -39,7 +41,10 @@
                 }
             });
         </script>
-        <script src="./sockets/server.js" type="text/javascript"></script>
+
+        <script src="../server/server.js" 
+        type="text/javascript"></script>
+        <!-- fin de scripts -->
     </div>
 </body>
 </html>
