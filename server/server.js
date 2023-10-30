@@ -9,7 +9,7 @@ const http = require('http');
 const server = http.createServer(app);
 const port = 3000;
 
-app.use(express.static());
+app.use(express.static('public'));
 
 const { Server } = require('socket.io');
 const io = new Server(server);
@@ -49,5 +49,5 @@ app.get('/', (req, res) => {
 
 // ruta que muestra el archivo indicado
 app.get('/index', (req, res) => {
-  res.sendFile(__dirname + '../client/index.html');
+  res.sendFile(__dirname + '/index.html');
 });
