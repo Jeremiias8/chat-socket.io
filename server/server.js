@@ -16,7 +16,7 @@ const io = new Server(server);
 // fin de declaraciones
 
 io.on('connection', (socket) => {
-    console.log('new connection id: '+socket.id);
+    console.log('new connection id : '+ socket.id);
 });
 
 io.on('connection', (socket) => {
@@ -44,7 +44,7 @@ io.on('connection', (socket) => {
 
 // ruta prueba
 app.get('/', (req, res) => {
-    res.send("Hey, soy la ruta principal del Chat con NodeJS !");
+    res.send("Hey, soy la ruta principal del Chat con NodeJS y WebSockets !");
 });
 
 // ruta que muestra el archivo indicado
